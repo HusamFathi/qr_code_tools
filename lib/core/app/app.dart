@@ -27,7 +27,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     final router = GoRouter(
-      initialLocation: sl<RoutesService>().qrCodeGeneratorRoute,
+      initialLocation: sl<RoutesService>().homeRoute,
 
       navigatorKey: RoutesService.navigatorKey,
       routes: sl<RoutesService>().routes,
@@ -76,7 +76,7 @@ class _AppState extends State<App> {
                 routerConfig: router,
               );
             }
-            return LoadingApp();
+            return const MaterialApp(home: LoadingApp());
           },
         ),
       ),

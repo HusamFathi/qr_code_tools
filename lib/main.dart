@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_code_tools/core/app/app.dart';
+import 'package:qr_code_tools/core/injection/init_di.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initDI();
   runApp(const App());
 }

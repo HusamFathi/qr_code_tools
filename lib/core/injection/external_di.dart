@@ -4,6 +4,7 @@ import 'package:internet_connection_checker_plus/internet_connection_checker_plu
 import 'init_di.dart' show sl;
 
 Future<void> externalDI() async {
+  await EncryptedSharedPreferences.initialize('wIAXygJ8AjkSiGmh');
   final EncryptedSharedPreferences sharedPreferences =
       EncryptedSharedPreferences.getInstance();
 
