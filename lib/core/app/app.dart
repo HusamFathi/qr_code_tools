@@ -1,11 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_localized_locales/flutter_localized_locales.dart';
 import 'package:go_router/go_router.dart';
-import 'package:qr_code_tools/core/extensions/string.dart';
-import 'package:qr_code_tools/core/routes/routes_service.dart';
+
+import '../extensions/string.dart';
+import '../routes/routes_service.dart';
 
 import '../../src/settings/domain/entities/user_settings.dart';
 import '../../src/settings/presentation/blocs/user_settings/user_settings_bloc.dart';
@@ -24,26 +24,17 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  
- 
-
-  
-
   @override
   Widget build(BuildContext context) {
-   
     final router = GoRouter(
-      initialLocation:  sl<RoutesService>().qrCodeGeneratorRoute,
+      initialLocation: sl<RoutesService>().qrCodeGeneratorRoute,
 
-    
       navigatorKey: RoutesService.navigatorKey,
       routes: sl<RoutesService>().routes,
     );
 
     return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (context) => sl<UserSettingsBloc>()),
-      ],
+      providers: [BlocProvider(create: (context) => sl<UserSettingsBloc>())],
       child: BlocListener<UserSettingsBloc, UserSettingsState>(
         listener: (context, state) {},
         child: BlocBuilder<UserSettingsBloc, UserSettingsState>(

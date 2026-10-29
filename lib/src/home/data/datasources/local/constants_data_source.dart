@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_tools/core/injection/init_di.dart';
-import 'package:qr_code_tools/core/routes/routes_service.dart';
+
+import '../../../../../core/injection/init_di.dart';
+import '../../../../../core/routes/routes_service.dart';
 
 import '../../../../../core/extensions/string.dart';
 import '../../../../../core/locale/app_localizations_helper.dart';

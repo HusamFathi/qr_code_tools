@@ -6,8 +6,7 @@ import '../repositories/settings_repository.dart';
 class GetUserSettingsUseCase extends BaseUseCase<UserSettings, NoParams> {
   final SettingsRepository _repository;
 
-  GetUserSettingsUseCase({required SettingsRepository repository})
-    : _repository = repository;
+  GetUserSettingsUseCase({required this._repository});
 
   @override
   Future<UserSettings> execute(NoParams params) {

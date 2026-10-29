@@ -27,9 +27,7 @@ void settingsDi() {
 
   ///* settings repository
   sl.registerLazySingleton<SettingsRepository>(
-    () => SettingsRepositoryImpl(
-      settingsLocalDataSource: sl(),
-    ),
+    () => SettingsRepositoryImpl(settingsLocalDataSource: sl()),
   );
 
   /// settings mapper

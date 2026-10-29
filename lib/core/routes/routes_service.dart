@@ -2,7 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:qr_code_tools/core/injection/init_di.dart';
+
+import '../injection/init_di.dart';
 
 import 'routes_list.dart';
 
@@ -17,12 +18,11 @@ class RoutesService {
   final GlobalKey<NavigatorState> mainShellNavigatorKey =
       GlobalKey<NavigatorState>(debugLabel: 'mainShellNavigatorKey');
 
-
-    String homeRoute = '/';
+  String homeRoute = '/';
   // Setting route
-    String settingsRoute = '/settings';
+  String settingsRoute = '/settings';
   //qr code generator  route
-    String qrCodeGeneratorRoute = '/qr-code-generator';
+  String qrCodeGeneratorRoute = '/qr-code-generator';
 
   // privacy policy route
   static const String privacyPolicyRoute = '/privacy-policy';

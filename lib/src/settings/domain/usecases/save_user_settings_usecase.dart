@@ -5,8 +5,7 @@ import '../repositories/settings_repository.dart';
 class SaveUserSettingsUseCase extends UnitBaseUseCase<UserSettings> {
   final SettingsRepository _repository;
 
-  SaveUserSettingsUseCase({required SettingsRepository repository})
-    : _repository = repository;
+  SaveUserSettingsUseCase({required this._repository});
 
   @override
   Future<void> execute(UserSettings params) {

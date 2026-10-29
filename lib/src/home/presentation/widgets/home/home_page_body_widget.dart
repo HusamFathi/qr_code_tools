@@ -75,15 +75,12 @@ class HomeBodyWidget extends StatelessWidget {
               // ),
               labelType: !isDesktop ? NavigationRailLabelType.all : null,
               extended: isDesktop,
-    
+
               destinations: getDestinations(context),
               trailing: Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Spacer(),
-                    AppVersionWidget(),
-                  ],
+                  children: [const Spacer(), AppVersionWidget()],
                 ),
               ),
               selectedIndex: index,
@@ -115,10 +112,7 @@ class HomeBodyWidget extends StatelessWidget {
     return AppBar(
       automaticallyImplyLeading: false,
       scrolledUnderElevation: 0,
-      actions: [
-        
-        Gap(kSmallGap),
-      ],
+      actions: [Gap(kSmallGap)],
     );
   }
 

@@ -20,6 +20,4 @@ class HomeRepositoryImpl implements HomeRepository {
   HomeConstants getHomeConstants({required BuildContext context}) {
     return _constantsDataSource.getHomeConstants(context: context);
   }
-
-  
 }

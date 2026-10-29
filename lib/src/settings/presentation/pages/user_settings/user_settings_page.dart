@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../core/extensions/string.dart';
-import '../../../../../core/injection/init_di.dart';
 import '../../../../../core/locale/app_localizations_helper.dart';
 import '../../../../../core/src/presentation/widgets/app_version_widget.dart';
 import '../../../../../core/src/presentation/widgets/loading/loading_dialog.dart';
@@ -76,9 +75,8 @@ class SettingsPage extends StatelessWidget {
                       children: [
                         Text(Tr.of(context).personal.capitalizeFirstLetter()),
                         const Gap(kMediumGap),
-                        SettingsCardWidget(
-                          children: []),
-                           
+                        SettingsCardWidget(children: []),
+
                         const Gap(kMediumGap),
                         Text(Tr.of(context).general.capitalizeFirstLetter()),
                         const Gap(kMediumGap),
@@ -154,13 +152,10 @@ class SettingsPage extends StatelessWidget {
                                 ListTile(
                                   leading: const Icon(Icons.info),
                                   title: Text(
-                                    Tr.of(
-                                      context,
-                                    ).sendFeedback.capitalizeFirstLetter(),
+                                    Tr.of(context).sendFeedback
+                                        .capitalizeFirstLetter(),
                                   ),
-                                  onTap: () async {
-                                   
-                                  },
+                                  onTap: () async {},
                                 ),
                                 const Gap(kSmallGap),
                                 const Divider(),
@@ -209,9 +204,8 @@ class SettingsPage extends StatelessWidget {
                                     await UrlLauncher.open(kTermsOfUseLink);
                                   },
                                   title: Text(
-                                    Tr.of(
-                                      context,
-                                    ).termsOfUse.capitalizeFirstLetter(),
+                                    Tr.of(context).termsOfUse
+                                        .capitalizeFirstLetter(),
                                   ),
                                 ),
                                 const Gap(kSmallGap),
@@ -221,9 +215,8 @@ class SettingsPage extends StatelessWidget {
                                     Icons.privacy_tip_outlined,
                                   ),
                                   title: Text(
-                                    Tr.of(
-                                      context,
-                                    ).privacyPolicy.capitalizeFirstLetter(),
+                                    Tr.of(context).privacyPolicy
+                                        .capitalizeFirstLetter(),
                                   ),
                                   onTap: () async {
                                     await UrlLauncher.open(kPrivacyPolicyLink);
@@ -233,7 +226,6 @@ class SettingsPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        
                       ],
                     ),
                   ),

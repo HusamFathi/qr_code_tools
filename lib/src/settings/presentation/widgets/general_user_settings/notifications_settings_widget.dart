@@ -48,9 +48,8 @@ class NotificationsSettingsWidget extends StatelessWidget {
                   },
                 ),
                 title: Text(
-                  Tr.of(
-                    context,
-                  ).editNotificationPreferences.capitalizeFirstLetter(),
+                  Tr.of(context).editNotificationPreferences
+                      .capitalizeFirstLetter(),
                 ),
               ),
               child: Padding(
@@ -62,14 +61,12 @@ class NotificationsSettingsWidget extends StatelessWidget {
                         children: [
                           SwitchListTile.adaptive(
                             subtitle: Text(
-                              Tr.of(
-                                context,
-                              ).requiredFieldMessage.capitalizeFirstLetter(),
+                              Tr.of(context).requiredFieldMessage
+                                  .capitalizeFirstLetter(),
                             ),
                             title: Text(
-                              Tr.of(
-                                context,
-                              ).contentGeneration.capitalizeFirstLetter(),
+                              Tr.of(context).contentGeneration
+                                  .capitalizeFirstLetter(),
                             ),
                             value: settings.notificationTopics.contains(
                               'content_generation',

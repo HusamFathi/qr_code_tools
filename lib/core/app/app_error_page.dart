@@ -1,13 +1,11 @@
 import 'dart:developer';
 
-import 'package:encrypt_shared_preferences/provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../extensions/string.dart';
-import '../injection/init_di.dart';
 import '../locale/app_localizations_helper.dart';
 import '../utils/constants.dart';
 
@@ -57,7 +55,6 @@ class AppErrorPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-               
                 FilledButton(
                   onPressed: () async {
                     final Uri emailLaunchUri = Uri(
@@ -71,9 +68,8 @@ class AppErrorPage extends StatelessWidget {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              Tr.of(
-                                context,
-                              ).unKnownErrorMessage.capitalizeFirstLetter(),
+                              Tr.of(context).unKnownErrorMessage
+                                  .capitalizeFirstLetter(),
                             ),
                           ),
                         );

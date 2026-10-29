@@ -19,9 +19,8 @@ void showSocialAuthError({
           icon,
           const Gap(kSmallGap),
           Text(
-            Tr.of(
-              context,
-            ).errorGettingGoogleTokenMessage.capitalizeFirstLetter(),
+            Tr.of(context).errorGettingGoogleTokenMessage
+                .capitalizeFirstLetter(),
           ),
         ],
       ),

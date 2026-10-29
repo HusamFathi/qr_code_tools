@@ -4,6 +4,6 @@ import 'public_routes.dart';
 
 class RoutesList {
   static List<RouteBase> getRoutes() {
-    return [...publicRoutes(), ];
+    return [...publicRoutes()];
   }
 }

@@ -21,7 +21,6 @@ Future<void> showLoadingDialog(BuildContext context) async {
             Text(Tr.of(context).loadingMessage.capitalizeFirstLetter()),
             const Gap(kLargeGap),
             const LoadingWidget(),
-           
           ],
         ),
       ),

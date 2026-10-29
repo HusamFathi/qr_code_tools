@@ -10,9 +10,7 @@ import '../models/user_settings_model.dart';
 class SettingsRepositoryImpl implements SettingsRepository {
   final SettingsLocalDataSourceImpl _settingsLocalDataSource;
 
-  SettingsRepositoryImpl({
-    required this._settingsLocalDataSource,
-  });
+  SettingsRepositoryImpl({required this._settingsLocalDataSource});
 
   @override
   Future<UserSettings> getUserSettings() async {

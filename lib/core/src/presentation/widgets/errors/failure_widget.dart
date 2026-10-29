@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:gap/gap.dart';
-import 'package:qr_code_tools/core/routes/routes_service.dart';
+
 
 import '../../../../extensions/string.dart';
-import '../../../../injection/init_di.dart';
 import '../../../../locale/app_localizations_helper.dart';
 import '../../../../utils/constants.dart';
-import '../loading/loading_dialog.dart';
 import '../success_error_icon_widget.dart';
 import 'error_text_widget.dart';
 

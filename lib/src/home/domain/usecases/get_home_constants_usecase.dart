@@ -16,8 +16,7 @@ class GetHomeConstantsUseCaseParams extends Equatable {
 class GetHomeConstantsUseCase {
   final HomeRepository _repository;
 
-  GetHomeConstantsUseCase({required HomeRepository repository})
-    : _repository = repository;
+  GetHomeConstantsUseCase({required this._repository});
 
   HomeConstants call({required GetHomeConstantsUseCaseParams params}) {
     return _repository.getHomeConstants(context: params.context);

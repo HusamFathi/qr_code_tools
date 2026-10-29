@@ -1,7 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:qr_code_tools/core/extensions/string.dart';
+
+import '../../../extensions/string.dart';
 
 import '../../../locale/app_localizations_helper.dart';
 
