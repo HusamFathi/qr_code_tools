@@ -73,8 +73,8 @@ class HomeBodyWidget extends StatelessWidget {
               // selectedLabelTextStyle: TextStyle(
               //   color: Theme.of(context).colorScheme.primary,
               // ),
-              labelType: !isDesktop ? NavigationRailLabelType.all : null,
-              extended: isDesktop,
+              labelType: NavigationRailLabelType.all,
+              extended: false, //isDesktop,
 
               destinations: getDestinations(context),
               trailing: Expanded(
