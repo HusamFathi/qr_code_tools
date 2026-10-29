@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-
 import '../../../../extensions/string.dart';
 import '../../../../locale/app_localizations_helper.dart';
 import '../../../../utils/constants.dart';

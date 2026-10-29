@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/injection/init_di.dart';
-import '../../../../../core/routes/routes_service.dart';
-
 import '../../../../../core/extensions/string.dart';
+import '../../../../../core/injection/init_di.dart';
 import '../../../../../core/locale/app_localizations_helper.dart';
+import '../../../../../core/routes/routes_service.dart';
 import '../../models/home_constants_model.dart';
 import '../../models/home_tab_model.dart';
 

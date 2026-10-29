@@ -5,5 +5,7 @@ import 'init_di.dart' show sl;
 void servicesDi() {
   sl.registerSingleton<RoutesService>(RoutesService());
   sl<RoutesService>().init();
-  sl.registerLazySingleton<GlobalSettingsService>(() => GlobalSettingsService());
+  sl.registerLazySingleton<GlobalSettingsService>(
+    () => GlobalSettingsService(),
+  );
 }

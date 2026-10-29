@@ -4,14 +4,13 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_localized_locales/flutter_localized_locales.dart';
 import 'package:go_router/go_router.dart';
 
-import '../extensions/string.dart';
-import '../routes/routes_service.dart';
-
 import '../../src/settings/domain/entities/user_settings.dart';
 import '../../src/settings/presentation/blocs/user_settings/user_settings_bloc.dart';
+import '../extensions/string.dart';
 import '../injection/init_di.dart' show sl;
 import '../locale/app_language.dart';
 import '../locale/app_localizations_helper.dart';
+import '../routes/routes_service.dart';
 import '../src/presentation/widgets/errors/failure_widget.dart';
 import '../theme/app_theme.dart';
 import 'loading_app.dart';

@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:qr_code_tools/src/home/presentation/pages/home_shell.dart';
-import 'package:qr_code_tools/src/settings/presentation/pages/user_settings/user_settings_page.dart';
+
+import '../../src/home/presentation/pages/home_shell.dart';
+import '../../src/settings/presentation/pages/user_settings/user_settings_page.dart';
 
 import '../injection/init_di.dart';
 import 'routes_service.dart';
@@ -17,12 +18,11 @@ List<RouteBase> publicRoutes() {
           navigatorKey: sl<RoutesService>().homeShellNavigatorKey,
           routes: [
             GoRoute(
-              path:  sl<RoutesService>().homeRoute,
+              path: sl<RoutesService>().homeRoute,
               redirect: (context, state) =>
                   sl<RoutesService>().authRoutesRedirect(context, state),
-              pageBuilder: (context, state) => NoTransitionPage(
-                child: QrCodeGeneratorPage(),
-              ),
+              pageBuilder: (context, state) =>
+                  NoTransitionPage(child: QrCodeGeneratorPage()),
             ),
             // GoRoute(
             //   path: RoutesConfig.chatHistoryRoute,

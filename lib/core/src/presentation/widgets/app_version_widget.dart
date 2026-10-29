@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../../extensions/string.dart';
-
 import '../../../locale/app_localizations_helper.dart';
 
 class AppVersionWidget extends StatefulWidget {
