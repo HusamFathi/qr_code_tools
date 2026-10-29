@@ -19,8 +19,6 @@ List<RouteBase> publicRoutes() {
           routes: [
             GoRoute(
               path: sl<RoutesService>().homeRoute,
-              redirect: (context, state) =>
-                  sl<RoutesService>().authRoutesRedirect(context, state),
               pageBuilder: (context, state) =>
                   NoTransitionPage(child: QrCodeGeneratorPage()),
             ),
@@ -49,8 +47,6 @@ List<RouteBase> publicRoutes() {
           routes: [
             GoRoute(
               path: sl<RoutesService>().settingsRoute,
-              redirect: (context, state) =>
-                  sl<RoutesService>().authRoutesRedirect(context, state),
               pageBuilder: (context, state) =>
                   NoTransitionPage(child: SettingsPage()),
             ),

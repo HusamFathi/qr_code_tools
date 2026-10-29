@@ -26,7 +26,10 @@ class Tr {
   }
 
   static void initialize(BuildContext context) {
-    _instance = AppLocalizations.of(context)!;
-    _isInitialized = true;
+    final localizations = AppLocalizations.of(context);
+    if (localizations != null) {
+      _instance = localizations;
+      _isInitialized = true;
+    }
   }
 }

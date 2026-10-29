@@ -52,8 +52,10 @@ class _AppState extends State<App> {
               UserSettings userSetting = state.userSettings;
               return MaterialApp.router(
                 onGenerateTitle: (context) {
-                  Tr.initialize(context); // Initialize Tr here
-                  return Tr.of(context).appTitle.capitalizeFirstLetter();
+                  Tr.initialize(context);
+                  return Tr.isInitialized
+                      ? Tr.of(context).appTitle.capitalizeFirstLetter()
+                      : 'QR Code Tools';
                 },
                 localizationsDelegates: [
                   LocaleNamesLocalizationsDelegate(),
